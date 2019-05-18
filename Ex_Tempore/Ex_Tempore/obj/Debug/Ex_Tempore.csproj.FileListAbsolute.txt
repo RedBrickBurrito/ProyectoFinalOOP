@@ -1,0 +1,7 @@
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.csprojAssemblyReference.cache
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.csproj.CoreCompileInputs.cache
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\bin\Debug\Ex_Tempore.exe.config
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\bin\Debug\Ex_Tempore.exe
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\bin\Debug\Ex_Tempore.pdb
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.exe
+C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.pdb

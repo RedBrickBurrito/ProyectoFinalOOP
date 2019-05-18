@@ -1,0 +1,5 @@
+﻿a:La fecha del periódico está borrosa y no se alcanza a distinguir el número. El encabezado muestra en letras grandes y un poco borrosas “EL FIN DEL MUNDO”; alcanzas a leer la primera oración acerca del encabezado, “El mundo cae en el colapso económico más grande, miles de personas pierden sus empleos, y las naciones unidas llaman un comunicado a tomar solidaridad en estos tiempos de crisis”.
+b:Observas que en la foto se alcanza a distinguir un hombre de avanzada edad, con una mujer joven de pelo castaño  y ojos cafés, con un distintivo lunar en la mejilla derecha.
+c:Tomas la llave, y la guardas en tu inventario.
+d:Notas que el uniforme es militar, sin embargo no notas el país de origen del uniforme.Al parecer no se ve que te pueda quedar.
+e:Tomas la mochila y te la pones, parece que puedes guardar 10 cosas en ella. 

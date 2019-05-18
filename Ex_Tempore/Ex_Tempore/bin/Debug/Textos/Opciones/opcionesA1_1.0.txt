@@ -1,0 +1,5 @@
+﻿a:Tomar el periódico
+b:Tomar la foto
+c:Tomar la llave
+d:Examinar el uniforme
+e:Tomar la mochila
