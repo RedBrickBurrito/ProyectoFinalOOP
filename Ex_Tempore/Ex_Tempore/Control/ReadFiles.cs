@@ -13,13 +13,13 @@ namespace Ex_Tempore.Control
     {
         static public Dictionary<string, string> allTheThings = new Dictionary<string, string>();
         static public Dictionary<string, string> respuestas = new Dictionary<string, string>();
-        string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        
         
 
-        public void read()
+        public static void readOpciones(string filepath)
         {
-            string opciones = dir + @"\Textos\Opciones\opcionesA1.txt";
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //filepath esta en mastercontrol
+            string opciones = dir + @"\Textos\Opciones\" + filepath;
 
             // los archivos se suben a la carpeta Debug que esta adentro de bin
             using (StreamReader sr = new StreamReader(opciones))
@@ -39,9 +39,11 @@ namespace Ex_Tempore.Control
             }
         }
 
-        public void readRespuestas()
+        public static void readRespuestas(string filepath)
         {
-            string respuestas1 = dir + @"\Textos\Respuestas\respuesta.txt";
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //filepath esta en mastercontrol
+            string respuestas1 = dir + @"\Textos\Respuestas\" + filepath;
 
             using (StreamReader sr = new StreamReader(respuestas1))
             {
@@ -58,6 +60,19 @@ namespace Ex_Tempore.Control
                     //SplitItGood(splitMe, allTheThings); // Hard part. If there are more than 2 results, use the method below.
                 }
             }
+        }
+
+        public static void clear()
+        {
+            allTheThings.Clear();
+            respuestas.Clear();
+        }
+
+        public static void Add(string opciones,string respuestas)
+        {
+            clear();
+            readOpciones(opciones);
+            readRespuestas(respuestas);
         }
     }
 }

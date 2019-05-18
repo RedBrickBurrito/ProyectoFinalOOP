@@ -16,16 +16,17 @@ namespace Ex_Tempore.Control
         public void play()
         {
 
-            ReadFiles readOpciones = new ReadFiles();
-            ReadFiles readFiles = new ReadFiles();
-            readFiles.readRespuestas();
-            readOpciones.read();
+            //En los parametros va el nombre del archivo en texto
+            ReadFiles.readOpciones("opcionesA1_1.0.txt");
+            ReadFiles.readRespuestas("respuestasA1_1.txt");
+ 
             Console.WriteLine(l1.getDescription());
 
 
             Console.WriteLine("Opciones: ");
             while (ReadFiles.allTheThings.Count > 0)
             {
+                
                 ReadFiles.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
 
                 Console.WriteLine(l1.getOpciones());

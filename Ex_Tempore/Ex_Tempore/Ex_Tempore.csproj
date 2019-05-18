@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Actos\A1\Loc_1.1" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />

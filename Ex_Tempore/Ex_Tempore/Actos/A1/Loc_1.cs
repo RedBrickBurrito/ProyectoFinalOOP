@@ -40,6 +40,7 @@ namespace Ex_Tempore.Actos.A1
             {
 
                 string value = entry.Value;
+                int key = entry.Key.Count();
 
                 if (opcion.ToString() == entry.Key)
                 {
@@ -57,6 +58,26 @@ namespace Ex_Tempore.Actos.A1
 
                         mochila.isAlive = true;
                         Console.WriteLine("\n" + value);
+
+                            
+                    }
+                    else if(key == 0)
+                    {
+
+                        Console.WriteLine("Que quieres hacer?");
+                        ReadFiles.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
+                        foreach(KeyValuePair<string, string> entry_1 in ReadFiles.respuestas)
+                        {
+                            if (opcion.ToString() == "a")
+                            {
+                                break;
+                            }
+                            else if (opcion.ToString() == "b")
+                            {
+
+                            }
+                        }
+                        
                     }
                     else
                     {
