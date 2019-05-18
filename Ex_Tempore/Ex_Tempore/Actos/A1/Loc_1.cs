@@ -10,12 +10,14 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_1:Location
     {
-        ReadFiles readopciones = new ReadFiles();
+        FileControl readopciones = new FileControl();
         Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
 
         public Loc_1()
         {
-            roomTitle = "Cuarto Desconocido";
+            //falta añadir las locaciones por texto
+            roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
+
             roomDescription = "Haz despertado en una habitación sucia y destrozada." +
                 " \nTe duele la cabeza y tardas un tiempo en ponerte de pie." +
                 "Lo único que tienes puesto es ropa desgastada." +
@@ -36,7 +38,7 @@ namespace Ex_Tempore.Actos.A1
 
 
 
-            foreach (KeyValuePair<string, string> entry in ReadFiles.respuestas)
+            foreach (KeyValuePair<string, string> entry in FileControl.respuestas)
             {
 
                 string value = entry.Value;
@@ -65,8 +67,8 @@ namespace Ex_Tempore.Actos.A1
                     {
 
                         Console.WriteLine("Que quieres hacer?");
-                        ReadFiles.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
-                        foreach(KeyValuePair<string, string> entry_1 in ReadFiles.respuestas)
+                        FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
+                        foreach(KeyValuePair<string, string> entry_1 in FileControl.respuestas)
                         {
                             if (opcion.ToString() == "a")
                             {
@@ -82,7 +84,7 @@ namespace Ex_Tempore.Actos.A1
                     else
                     {
                         Console.WriteLine("\n" + value);
-                        ReadFiles.allTheThings.Remove(entry.Key);
+                        FileControl.allTheThings.Remove(entry.Key);
                     }
 
                 }

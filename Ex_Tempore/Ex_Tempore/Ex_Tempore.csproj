@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actos\A1\Loc_11.cs" />
     <Compile Include="Actos\A1\Loc_1.cs" />
     <Compile Include="Actos\Location.cs" />
     <Compile Include="Control\Inventory.cs" />
     <Compile Include="Control\MasterControl.cs" />
-    <Compile Include="Control\ReadFiles.cs" />
+    <Compile Include="Control\FileControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Actos\A1\Loc_1.1" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
