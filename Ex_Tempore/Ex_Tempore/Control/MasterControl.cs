@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ex_Tempore.Actos.A1;
+using Ex_Tempore.Actos;
+using Ex_Tempore.Control;
 
 namespace Ex_Tempore.Control
 {
     class MasterControl
     {
-
         Loc_1 l1 = new Loc_1();
 
 
@@ -28,11 +29,35 @@ namespace Ex_Tempore.Control
             while (FileControl.allTheThings.Count > 0)
             {
                 
-                FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                if (l1.conditionsMet == true)
+                {
+                    Console.WriteLine("\nQue quieres hacer?");
+                    Console.WriteLine("\nOpciones:");
+                    Console.WriteLine("\na Seguir Investigando");
+                    Console.WriteLine("b Abrir la puerta");
+                    char opcion2 = Console.ReadKey().KeyChar;
 
-                Console.WriteLine(l1.getOpciones());
+                   
+                    if (opcion2.ToString() == "b")
+                    {
+                        FileControl.clear();
+                        break;
+                    }
+
+                }
+                else
+                {
+
+                    FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+
+                    Console.WriteLine(l1.getOpciones());
+                }
+
+      
 
             }
+
+            FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
 
             FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
 

@@ -10,6 +10,8 @@ namespace Ex_Tempore.Actos
     {
         public string roomTitle;
         public string roomDescription;
+        public bool conditionsMet = false;
+        public bool Exit = false;
 
         public Location()
         {
@@ -34,6 +36,7 @@ namespace Ex_Tempore.Actos
             return roomTitle;
         }
 
+        
 
         //public string getTitle()
         //{

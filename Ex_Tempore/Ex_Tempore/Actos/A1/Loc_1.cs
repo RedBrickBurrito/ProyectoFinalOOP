@@ -14,6 +14,9 @@ namespace Ex_Tempore.Actos.A1
         public static Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
         public static Inventory llave = new Inventory("llave", true, "una llave para abrir una puerta", false, 0);
 
+        public bool confitionsMet = false;
+
+        
         public Loc_1()
         {
             //falta añadir las locaciosnes por texto
@@ -27,6 +30,8 @@ namespace Ex_Tempore.Actos.A1
 
 
         }
+
+        
 
         public string getOpciones()
         {
@@ -54,8 +59,10 @@ namespace Ex_Tempore.Actos.A1
                     else if (opcion.ToString() == "c" && mochila.isAlive == true)
                     {
                         Console.WriteLine("\n" + value);
+
                         mochila.space -= 1;
                         llave.useable = true;
+                        conditionsMet = true;
                         FileControl.allTheThings.Remove(entry.Key);
                     }
                     else if (opcion.ToString() == "e")
@@ -67,37 +74,16 @@ namespace Ex_Tempore.Actos.A1
 
 
                     }
-                    else if(key == 0)
-                    {
-
-                        Console.WriteLine("Que quieres hacer?");
-                        FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
-                        foreach(KeyValuePair<string, string> entry_1 in FileControl.respuestas)
-                        {
-                            if (opcion.ToString() == "a")
-                            {
-                                break;
-                            }
-                            else if (opcion.ToString() == "b" && llave.useable == true)
-                            {
-                                Loc_2 loc2 = new Loc_2();
-                                loc2.getOpciones();
-                            }
-                            else if(opcion.ToString() == "b")
-                            {
-                                Console.WriteLine("No tienes la llave");
-                                break;
-                            }
-                        }
-                        
-                    }
+                   
                     else
                     {
                         Console.WriteLine("\n" + value);
                         FileControl.allTheThings.Remove(entry.Key);
                     }
 
-                }
+                } 
+                    
+                
             }
 
             return "";
