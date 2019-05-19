@@ -10,12 +10,13 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_1:Location
     {
-        FileControl readopciones = new FileControl();
-        Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
+        public static FileControl readopciones = new FileControl();
+        public static Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
+        public static Inventory llave = new Inventory("llave", true, "una llave para abrir una puerta", false, 0);
 
         public Loc_1()
         {
-            //falta añadir las locaciones por texto
+            //falta añadir las locaciosnes por texto
             roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
 
             roomDescription = "Haz despertado en una habitación sucia y destrozada." +
@@ -54,14 +55,17 @@ namespace Ex_Tempore.Actos.A1
                     {
                         Console.WriteLine("\n" + value);
                         mochila.space -= 1;
+                        llave.useable = true;
+                        FileControl.allTheThings.Remove(entry.Key);
                     }
                     else if (opcion.ToString() == "e")
                     {
 
                         mochila.isAlive = true;
                         Console.WriteLine("\n" + value);
+                        FileControl.allTheThings.Remove(entry.Key);
 
-                            
+
                     }
                     else if(key == 0)
                     {
@@ -74,9 +78,15 @@ namespace Ex_Tempore.Actos.A1
                             {
                                 break;
                             }
-                            else if (opcion.ToString() == "b")
+                            else if (opcion.ToString() == "b" && llave.useable == true)
                             {
-
+                                Loc_2 loc2 = new Loc_2();
+                                loc2.getOpciones();
+                            }
+                            else if(opcion.ToString() == "b")
+                            {
+                                Console.WriteLine("No tienes la llave");
+                                break;
                             }
                         }
                         
