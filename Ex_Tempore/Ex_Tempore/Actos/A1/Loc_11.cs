@@ -18,11 +18,8 @@ namespace Ex_Tempore.Actos.A1
 
             roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
  
-            roomDescription = "Haz despertado en una habitación sucia y destrozada." +
-                " \nTe duele la cabeza y tardas un tiempo en ponerte de pie." +
-                "Lo único que tienes puesto es ropa desgastada." +
-                "\nMiras a tu alrededor y hay una variedad de objetos;\n" +
-                "un periódico, una foto,una llave,un uniforme sin usar, y una mochila un poco desgastada.";
+            roomDescription = "Abres la puerta y te encuentras en un pasillo, con dos puertas a los lados. " +
+                " \nEscuchas un ruido, al final de pasillo.";
 
 
         }
@@ -30,9 +27,9 @@ namespace Ex_Tempore.Actos.A1
         
 
             
-        }
-
-
     }
+
+
+}
 
 
