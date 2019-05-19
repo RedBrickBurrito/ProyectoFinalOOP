@@ -15,6 +15,7 @@ namespace Ex_Tempore.Actos.A1
         public static Inventory llave = new Inventory("llave", true, "una llave para abrir una puerta", false, 0);
 
         public bool confitionsMet = false;
+        public bool seguir = false;
 
         
         public Loc_1()
@@ -43,7 +44,7 @@ namespace Ex_Tempore.Actos.A1
 
 
 
-
+            
             foreach (KeyValuePair<string, string> entry in FileControl.respuestas)
             {
 

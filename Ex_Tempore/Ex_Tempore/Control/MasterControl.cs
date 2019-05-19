@@ -28,8 +28,8 @@ namespace Ex_Tempore.Control
            
             while (FileControl.allTheThings.Count > 0)
             {
-                
-                if (l1.conditionsMet == true)
+
+                if (l1.conditionsMet == true && l1.seguir == false || FileControl.allTheThings.Count == 0)
                 {
                     Console.WriteLine("\nQue quieres hacer?");
                     Console.WriteLine("\nOpciones:");
@@ -37,8 +37,12 @@ namespace Ex_Tempore.Control
                     Console.WriteLine("b Abrir la puerta");
                     char opcion2 = Console.ReadKey().KeyChar;
 
-                   
-                    if (opcion2.ToString() == "b")
+                   if(opcion2.ToString() == "a")
+                    {
+                        l1.seguir = true;
+                        Console.WriteLine("\n");
+                    }
+                    else if (opcion2.ToString() == "b")
                     {
                         FileControl.clear();
                         break;
@@ -57,9 +61,9 @@ namespace Ex_Tempore.Control
 
             }
 
+ 
             FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
 
-            FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
 
             while (FileControl.allTheThings.Count > 0)
             {
