@@ -1,0 +1,2 @@
+a:Examinar pila de juguetes
+b:Salir del cuarto

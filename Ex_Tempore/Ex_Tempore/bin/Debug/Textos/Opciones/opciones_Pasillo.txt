@@ -1,0 +1,3 @@
+a:Abres la puerta de la izquierda
+b:Abres la puerta de la derecha
+c:Caminas a investigar el ruido
