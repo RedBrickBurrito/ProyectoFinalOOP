@@ -5,3 +5,5 @@ C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\bin\Debug\Ex_
 C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\bin\Debug\Ex_Tempore.pdb
 C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.exe
 C:\Users\A0156\Source\Repos\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.pdb
+C:\Users\Javier Sosa Puga\Documents\GitHub\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.exe
+C:\Users\Javier Sosa Puga\Documents\GitHub\ProyectoFinalOOP\Ex_Tempore\Ex_Tempore\obj\Debug\Ex_Tempore.pdb

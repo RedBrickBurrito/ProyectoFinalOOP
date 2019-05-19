@@ -1,0 +1,4 @@
+﻿a:Tomar la botella de agua.
+b:Tomar los antibióticos. 
+c:Tomar vendas.
+d:Salir del cuarto
