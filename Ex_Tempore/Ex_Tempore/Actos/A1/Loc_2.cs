@@ -8,7 +8,7 @@ using Ex_Tempore.Control;
 
 namespace Ex_Tempore.Actos.A1
 {
-    class Loc_2 : Loc_1
+    class Loc_2 : Location
     {
 
 
@@ -18,19 +18,34 @@ namespace Ex_Tempore.Actos.A1
 
             //roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
 
-            roomDescription = "Abres la puerta y te encuentras en un pasillo, con dos puertas a los lados. Escuchas un ruido, al final de pasillo.";
+            roomDescription = "Abres la puerta y te encuentras en un pasillo, con dos puertas a los lados. " +
+                "Escuchas un ruido, al final de pasillo.";
 
 
         }
 
 
-        //public string getOpciones();
+        public string getOpciones()
+        {
+            char opcion = Console.ReadKey().KeyChar;
 
 
-        //}
 
 
-    }
+
+
+            foreach (KeyValuePair<string, string> entry in FileControl.respuestas)
+            {
+
+            }
+
+            return "";
+        }
+
+          
+
+
+        }
 }
 
 

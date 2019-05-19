@@ -10,12 +10,8 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_1:Location
     {
-        public static FileControl readopciones = new FileControl();
-        public static Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
-        public static Inventory llave = new Inventory("llave", true, "una llave para abrir una puerta", false, 0);
-
-        public bool confitionsMet = false;
-        public bool seguir = false;
+       
+       
 
         
         public Loc_1()

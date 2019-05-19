@@ -12,6 +12,7 @@ namespace Ex_Tempore.Control
     class MasterControl
     {
         Loc_1 l1 = new Loc_1();
+        Loc_2 l2 = new Loc_2();
 
 
         public void play()
@@ -24,7 +25,7 @@ namespace Ex_Tempore.Control
             Console.WriteLine(l1.getDescription());
 
 
-            Console.WriteLine("Opciones: ");
+            
            
             while (FileControl.allTheThings.Count > 0)
             {
@@ -51,9 +52,10 @@ namespace Ex_Tempore.Control
                 }
                 else
                 {
-
-                    FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-
+                    Console.WriteLine("\nOpciones: ");
+                    Console.WriteLine(" ");
+                    FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+                  
                     Console.WriteLine(l1.getOpciones());
                 }
 
@@ -62,14 +64,13 @@ namespace Ex_Tempore.Control
             }
 
  
-            FileControl.Add("opcionesA1_1.1.txt", "respuestasA1_1.txt");
-
+            FileControl.Add("opciones_Pasillo.txt", "respuestas_Pasillo.txt");
+            Console.WriteLine(l1.getDescription());
 
             while (FileControl.allTheThings.Count > 0)
             {
 
                 FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-
                 Console.WriteLine(l1.getOpciones());
 
             }
