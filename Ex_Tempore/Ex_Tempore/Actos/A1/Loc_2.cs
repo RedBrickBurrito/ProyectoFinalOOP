@@ -23,8 +23,8 @@ namespace Ex_Tempore.Actos.A1
 
         }
 
-        
-        
+
+        public string getOpciones();
 
             
         }
