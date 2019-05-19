@@ -1,0 +1,4 @@
+﻿a:Tomas la botella de agua y la guardas en tu inventario. 
+b:Tomas los antibióticos y los guardas en tu mochila.
+c:Tomas las vendas y los guardas en tu mochila. 
+d:Sales del cuarto de vuelta al pasillo.
