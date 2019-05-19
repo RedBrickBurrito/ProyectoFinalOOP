@@ -54,5 +54,10 @@ namespace Ex_Tempore.Actos
         {
             roomDescription = description;
         }
+
+
+        //puvlic bool Exit();M
+        
+       
     }
 }

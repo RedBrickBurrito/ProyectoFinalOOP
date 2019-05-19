@@ -12,7 +12,7 @@ namespace Ex_Tempore.Control
         public string name;
         public bool isAlive = false;
         public byte space = 0;
-        private bool useable;
+        public bool useable = false;
         private bool needsItem;
         private string description;
 
