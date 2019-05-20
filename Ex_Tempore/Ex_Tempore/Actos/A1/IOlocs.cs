@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ex_Tempore.Actos.A1
 {
-    interface IOloc_1
+    interface IOlocs
     {
+        string getOpciones();
     }
 }

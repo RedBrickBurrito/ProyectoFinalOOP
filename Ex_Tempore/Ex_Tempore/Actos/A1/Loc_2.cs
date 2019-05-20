@@ -8,7 +8,7 @@ using Ex_Tempore.Control;
 
 namespace Ex_Tempore.Actos.A1
 {
-    class Loc_2 : Location
+    class Loc_2 : Location, IOlocs
     {
 
 

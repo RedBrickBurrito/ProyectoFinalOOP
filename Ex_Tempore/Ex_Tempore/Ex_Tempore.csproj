@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actos\A1\IOlocs.cs" />
     <Compile Include="Actos\A1\Loc_2.cs" />
     <Compile Include="Actos\A1\Loc_1.cs" />
     <Compile Include="Actos\A1\Loc_3.cs" />
