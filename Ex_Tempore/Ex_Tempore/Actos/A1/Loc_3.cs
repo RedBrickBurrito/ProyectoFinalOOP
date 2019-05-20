@@ -131,6 +131,13 @@ namespace Ex_Tempore.Actos.A1
                                             {
                                                 Console.WriteLine("Natalia: Quien te dio permiso de llamarme Linda, idiota.Sal de aquí!!!");
                                                 Console.WriteLine("\nPresiona Esc para salir afuera...");
+                                                do
+                                                {
+                                                    while (!Console.KeyAvailable)
+                                                    {
+                                                        break;
+                                                    }
+                                                } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
                                                 while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape))
                                                 {
                                                     break;

@@ -8,5 +8,9 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_4
     {
+        public Loc_4()
+        {
+            //afuera distritpo
+        }
     }
 }

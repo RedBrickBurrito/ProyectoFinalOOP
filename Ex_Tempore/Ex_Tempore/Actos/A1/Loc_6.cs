@@ -8,5 +8,9 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_6
     {
+        public Loc_6()
+        {
+            //Disytrito noche
+        }
     }
 }

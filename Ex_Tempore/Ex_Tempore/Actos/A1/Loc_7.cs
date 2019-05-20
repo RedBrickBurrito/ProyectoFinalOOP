@@ -8,5 +8,9 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_7
     {
+        public Loc_7()
+        {
+            //Adentro de al guaridda
+        }
     }
 }

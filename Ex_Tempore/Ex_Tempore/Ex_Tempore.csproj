@@ -46,6 +46,10 @@
     <Compile Include="Actos\A1\Loc_2.cs" />
     <Compile Include="Actos\A1\Loc_1.cs" />
     <Compile Include="Actos\A1\Loc_3.cs" />
+    <Compile Include="Actos\A1\Loc_4.cs" />
+    <Compile Include="Actos\A1\Loc_5.cs" />
+    <Compile Include="Actos\A1\Loc_6.cs" />
+    <Compile Include="Actos\A1\Loc_7.cs" />
     <Compile Include="Actos\Location.cs" />
     <Compile Include="Control\Inventory.cs" />
     <Compile Include="Control\MasterControl.cs" />
