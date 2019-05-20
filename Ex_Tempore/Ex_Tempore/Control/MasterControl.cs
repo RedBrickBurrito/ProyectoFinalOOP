@@ -50,15 +50,17 @@ namespace Ex_Tempore.Control
 
                             if (opcion2.ToString() == "a")
                             {
+                                FileControl.Recorrido.Add("Seguir Investigando");
                                 l1.seguir = true;
                                 Console.WriteLine("\n");
                             }
                             else if (opcion2.ToString() == "b")
                             {
+                                FileControl.Recorrido.Add("Abrir puerta");
                                 FileControl.clear();
                                 break;
                             }
-
+                            Console.Clear();
                         }
                         else
                         {
@@ -85,6 +87,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l2.conditionsMet == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -107,6 +110,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l3.endThis == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -129,6 +133,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l4.conditionsMet == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -150,6 +155,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l5.conditionsMet == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -171,6 +177,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l6.conditionsMet == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -192,6 +199,7 @@ namespace Ex_Tempore.Control
                     {
                         if (l7.conditionsMet == true || FileControl.allTheThings.Count == 0)
                         {
+                            Console.Clear();
                             break;
                         }
                         else
@@ -219,7 +227,7 @@ namespace Ex_Tempore.Control
                 }
                 else if (Location.mochila.space == 0)
                 {
-                    Console.WriteLine("Se te acabo el espcaio de mochila");
+                    Console.WriteLine("Se te acabo el espcacio de la mochila");
                 }
 
             }

@@ -11,9 +11,30 @@ namespace Ex_Tempore
     {
         static void Main(string[] args)
         {
+            bool isReady = false;
             MasterControl play = new MasterControl();
 
-            play.play();
+            Console.WriteLine("--------------------------------------------EX TEMPORE------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------presiona enter para jugar-----------------------------------");
+            do
+            {
+                while (!Console.KeyAvailable)
+                {
+                    isReady = true;
+                }
+            } while (Console.ReadKey(true).Key != ConsoleKey.Enter);
+            if(isReady == true)
+            {
+                play.play();
+            }
+ 
+
         }
     }
 }

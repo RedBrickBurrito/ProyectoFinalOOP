@@ -51,10 +51,12 @@ namespace Ex_Tempore.Actos.A1
                 {
                     if (opcion.ToString() == "c" && mochila.isAlive == false)
                     {
+                        FileControl.Recorrido.Add("no tienes donde guardarla");
                         Console.WriteLine("\n no tienes donde guardarla");
                     }
                     else if (opcion.ToString() == "c" && mochila.isAlive == true)
                     {
+                        FileControl.Recorrido.Add(value);
                         Console.WriteLine("\n" + value);
 
                         mochila.space -= 1;
@@ -64,7 +66,7 @@ namespace Ex_Tempore.Actos.A1
                     }
                     else if (opcion.ToString() == "e")
                     {
-
+                        FileControl.Recorrido.Add(value);
                         mochila.isAlive = true;
                         Console.WriteLine("\n" + value);
                         FileControl.allTheThings.Remove(entry.Key);
@@ -74,6 +76,7 @@ namespace Ex_Tempore.Actos.A1
                    
                     else
                     {
+                        FileControl.Recorrido.Add(value);
                         Console.WriteLine("\n" + value);
                         FileControl.allTheThings.Remove(entry.Key);
                     }

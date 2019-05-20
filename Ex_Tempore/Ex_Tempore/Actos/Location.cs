@@ -38,7 +38,7 @@ namespace Ex_Tempore.Actos
             roomDescription = "";
         }
 
-        public Location(string title, string description)
+        public  Location(string title, string description)
         {
             roomTitle = title;
             roomDescription = description;

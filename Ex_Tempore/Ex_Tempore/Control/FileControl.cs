@@ -18,12 +18,13 @@ namespace Ex_Tempore.Control
         static public Dictionary<string, string> allTheThingsTemp = new Dictionary<string, string>();
         static public Dictionary<string, string> respuestasTemp = new Dictionary<string, string>();
         static public List<string> roomDescriptions = new List<string>();
-
- 
-
+        static public List<string> recorrido = new List<string>();
 
 
-        public static void readOpciones(string filepath)
+
+
+
+        public static void readOpciones(string filepath) 
         {
             string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             //filepath esta en mastercontrol
@@ -176,6 +177,15 @@ namespace Ex_Tempore.Control
         {
             clearRespuestasTemp();
             readRespuestasTemp(respuestas);
+        }
+
+        public static void Recorrido()
+        {
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //filepath esta en mastercontrol
+            string opciones = dir + @"\Textos\recorrido.txt";
+            string[] recorridoarray = recorrido.ToArray();
+            File.WriteAllLines(opciones, recorridoarray);
         }
     }
 }

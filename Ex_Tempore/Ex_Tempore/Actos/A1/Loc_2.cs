@@ -17,8 +17,10 @@ namespace Ex_Tempore.Actos.A1
 
             //roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
 
+            FileControl.Recorrido.Add(roomDescription);
             roomDescription = "\nAbres la puerta y te encuentras en un pasillo, con dos puertas a los lados. " +
                 "Escuchas un ruido, al final de pasillo.";
+            FileControl.Recorrido.Add(roomDescription);
 
 
         }
@@ -28,6 +30,7 @@ namespace Ex_Tempore.Actos.A1
         {
             char opcion = Console.ReadKey().KeyChar;
             Console.WriteLine("");
+            FileControl.Recorrido.Add(opcion.ToString());
 
             foreach (KeyValuePair<string, string> entry in FileControl.respuestas)
             {
@@ -40,6 +43,7 @@ namespace Ex_Tempore.Actos.A1
 
                     if (opcion.ToString() == "a")
                     {
+                        FileControl.Recorrido.Add(" Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.");
                         Console.WriteLine("");
                         Console.WriteLine(" Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.");
                         FileControl.allTheThings.Remove(entry.Key);
@@ -48,7 +52,7 @@ namespace Ex_Tempore.Actos.A1
                     {
 
 
-
+                        FileControl.Recorrido.Add(value);
                         FileControl.AddRespuestasTemp("respuestas_CuartoDerecha.txt");
                         FileControl.AddOpcionesTemp("opciones_CuartoDerecha.txt");
                         Console.WriteLine("\n" + value);
@@ -72,13 +76,15 @@ namespace Ex_Tempore.Actos.A1
                                     if (opcion.ToString() == entry.Key)
                                     {
                                         char opcion2 = Console.ReadKey().KeyChar;
+                                        FileControl.Recorrido.Add(opcion2.ToString());
                                         if (opcion2.ToString() == "a")
                                         {
                                             mochila.space -= 1;
                                             botellaAgua.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
                                             Console.WriteLine("\n Haz guardado el agua en tu mochila");
-                                           
+                                            FileControl.Recorrido.Add("\n Haz guardado el agua en tu mochila");
+
 
 
                                         }
@@ -87,6 +93,7 @@ namespace Ex_Tempore.Actos.A1
                                             mochila.space -= 1;
                                             antibioticos.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            FileControl.Recorrido.Add("\n Haz guardado los antibioticos en tu mochila");
                                             Console.WriteLine("\n Haz guardado los antibioticos en tu mochila");
 
 
@@ -96,13 +103,15 @@ namespace Ex_Tempore.Actos.A1
                                             mochila.space -= 1;
                                             vendas.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
+
+                                            FileControl.Recorrido.Add("\n Haz guardado las vendas en tu mochila");
                                             Console.WriteLine("\n Haz guardado las vendas en tu mochila");
 
 
                                         }
                                         else if (opcion2.ToString() == "d")
                                         {
-
+                                            FileControl.Recorrido.Add("\n Regresar Pasillo");
                                             FileControl.allTheThingsTemp.Clear();
 
                                         }
