@@ -40,7 +40,8 @@ namespace Ex_Tempore.Actos.A1
 
                     if (opcion.ToString() == "a")
                     {
-                        Console.WriteLine("Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.");
+                        Console.WriteLine("");
+                        Console.WriteLine(" Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.");
                         FileControl.allTheThings.Remove(entry.Key);
                     }
                     else if (opcion.ToString() == "b")
@@ -76,7 +77,7 @@ namespace Ex_Tempore.Actos.A1
                                             mochila.space -= 1;
                                             botellaAgua.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
-                                            Console.WriteLine("\nHaz guardado el agua en tu mochila");
+                                            Console.WriteLine("\n Haz guardado el agua en tu mochila");
                                            
 
 
@@ -86,7 +87,7 @@ namespace Ex_Tempore.Actos.A1
                                             mochila.space -= 1;
                                             antibioticos.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
-                                            Console.WriteLine("\nHaz guardado los antibioticos en tu mochila");
+                                            Console.WriteLine("\n Haz guardado los antibioticos en tu mochila");
 
 
                                         }
@@ -95,7 +96,7 @@ namespace Ex_Tempore.Actos.A1
                                             mochila.space -= 1;
                                             vendas.useable = true;
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
-                                            Console.WriteLine("\nHaz guardado las vendas en tu mochila");
+                                            Console.WriteLine("\n Haz guardado las vendas en tu mochila");
 
 
                                         }

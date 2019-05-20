@@ -96,7 +96,7 @@ namespace Ex_Tempore.Control
 
             while (FileControl.allTheThings.Count > 0)
             {
-                if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                if (l3.endThis == true || FileControl.allTheThings.Count == 0)
                 {
                     break;
                 }
