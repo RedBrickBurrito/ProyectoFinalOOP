@@ -58,6 +58,7 @@ namespace Ex_Tempore.Actos.A1
 
                                         if (opcion2.ToString() == "a")
                                         {
+                                            amistadNatalia += 1;
                                             Console.WriteLine("\n Si, no hay problema es muy común , que esten asi todas la casas, " +
                                                 " en cuanto a tu amnesia “temporal” creo que se debe a que caiste del cielo.");
                                             Console.WriteLine(" Si, creo que fue por eso, por cierto cual es tu nombre ?");
@@ -105,6 +106,7 @@ namespace Ex_Tempore.Actos.A1
                                             Console.WriteLine("\n Presiona Enter para continuar...");
                                             while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Enter))
                                             {
+                                                amistadNatalia += 1;
                                                 Console.WriteLine(" a:Vaya que has tenido una vida difícil me imagino. " +
                                                     " Por cierto nunca me mencionaste tu nombre?");
                                                 Console.WriteLine("\n Natalia - Ahh claro qué tonta, se me paso decirte, me llamo Natalia." +
@@ -128,7 +130,7 @@ namespace Ex_Tempore.Actos.A1
                                         }
                                         else if (opcion2.ToString() == "d")
                                         {
-
+                                            amistadNatalia -= 1;
                                             Console.WriteLine("\n Heey, recuerda que yo fui quien te cuidó durante tres días, se mas agradecido!!!");
                                             Console.WriteLine(" Opciones:");
                                             Console.WriteLine("a Tranquila linda, no te alteres quería ver como respondias." +
@@ -151,7 +153,7 @@ namespace Ex_Tempore.Actos.A1
                                             }
                                             else if (opciones3.ToString() == "b")
                                             {
-
+                                                amistadNatalia -= 1;
                                                 Console.WriteLine(" Natalia: Sal de mi casa idiota!!!");
                                                 Console.WriteLine("\n Presiona Esc para salir afuera...");
                                                 do
