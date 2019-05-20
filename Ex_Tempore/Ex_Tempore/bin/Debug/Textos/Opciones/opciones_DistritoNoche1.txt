@@ -1,3 +1,3 @@
-﻿a:[Sacas la pistola y te acercas a ayudarlo] 
-b:[Te alejas] (regresas a las opciones)
+﻿a:[Sacas la pistola y te acercas a ayudarlo].
+b:[Te alejas] (regresas a las opciones).
 c:[Le disparas a los atacantes ( pierdes 3 balas ) ]. 

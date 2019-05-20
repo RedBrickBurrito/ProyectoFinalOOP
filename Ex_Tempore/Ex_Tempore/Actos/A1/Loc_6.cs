@@ -34,17 +34,26 @@ namespace Ex_Tempore.Actos.A1
                 {
                     if (opcion.ToString() == "a")
                     {
-                        FileControl.AddRespuestasTemp("respuestas_CuartoBlancoA.txt");
-                        FileControl.AddOpcionesTemp("opciones_CuartoBlancoA.txt");
                         Console.WriteLine("\n" + value);
-                        FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+                        FileControl.AddRespuestasTemp("respuestas_DistritoNoche1.txt");
+                        FileControl.AddOpcionesTemp("opciones_DistritoNoche1.txt");
+
+                        //FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
                         while (FileControl.allTheThingsTemp.Count > 0)
                         {
                             foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
                             {
-
+                                Console.WriteLine("a - Los atacantes al ver tu arma paran de golpearlo y se alejan," +
+                                    " insultandome mientras lo hacen." +
+                                    "Extraño (herido) - *Cof* *Cof* Gracias….. [Pierde la conciencia]." +
+                                    " A lo lejos ves que salen un grupo de hombres armados," +
+                                    " que se acercan a ti rápidamente." +
+                                    "Hombre Armado - Manos a la cabeza si no quieres que te vuele la cabeza. (Apunta el arma hacia ti ).");
+                                Console.WriteLine("");
+                                
                                 string value1 = entry1.Value;
                                 int key1 = entry1.Key.Count();
+                                //FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
                                 if (FileControl.allTheThingsTemp.Count == 0)
                                 {
                                     break;
@@ -53,16 +62,19 @@ namespace Ex_Tempore.Actos.A1
                                 {
                                     if (opcion.ToString() == entry.Key)
                                     {
-                                        char opcion2 = Console.ReadKey().KeyChar;
-                                        if (opcion2.ToString() == "a")
+                                        Console.WriteLine("[El hombre amarra tus manos y te escolta ]");
+                                        Console.WriteLine("\n Presiona Enter para continuar...");
+                                        do
                                         {
-                                            Console.WriteLine("\nBueno no es cuestion de que quieras o no," +
-                                                "los policias te lleavran de vuekta al distrito," +
-                                                "necesito que acabes con los rebeldes.");
-                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
-                                            conditionsMet = true;
-                                            break;
-                                        }
+                                            while (!Console.KeyAvailable)
+                                            {
+                                                FileControl.allTheThingsTemp.Clear();
+                                                endThis = true;
+                                                conditionsMet = true;
+                                                break;
+                                            }
+                                        } while (Console.ReadKey(true).Key != ConsoleKey.Enter);
+                                        break;
 
                                     }
                                 }
@@ -74,39 +86,32 @@ namespace Ex_Tempore.Actos.A1
                     }
                     else if (opcion.ToString() == "b")
                     {
-                        FileControl.AddRespuestasTemp("respuestas_CuartoBlancoA.txt");
-                        FileControl.AddOpcionesTemp("opciones_CuartoBlancoA.txt");
+                        FileControl.AddRespuestasTemp("respuestas_DistritoNoche1.txt");
+                        FileControl.AddOpcionesTemp("opciones_DistritoNoche1.txt");
                         Console.WriteLine("\n" + value);
-                        FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+                        //FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
                         while (FileControl.allTheThingsTemp.Count > 0)
                         {
                             foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
                             {
-
-                                string value1 = entry1.Value;
-                                int key1 = entry1.Key.Count();
-                                if (FileControl.allTheThingsTemp.Count == 0)
+                                if (amistadNatalia > 1)
                                 {
+                                    Console.WriteLine("Tocas la puerta de la casa de Natalia, escuchas pasos cada vez mas cerca de la puerta," +
+                                        " cortos y livianos, es Natalia.");
+                                    Console.WriteLine("Natalia - Vaya es demasiado tarde, me alegra que hayas venido" +
+                                        "pero ahora necesito dormir ");
+                                    Console.WriteLine("[Te regresas]");
                                     break;
                                 }
-                                else
+                                else if(amistadNatalia < 0)
                                 {
-                                    if (opcion.ToString() == entry.Key)
-                                    {
-                                        char opcion2 = Console.ReadKey().KeyChar;
-                                        if (opcion2.ToString() == "a")
-                                        {
-                                            Console.WriteLine("\nMe gusta tu actitud lamentablemente esto no esta en discusión" +
-                                                "Mataras a unos cuantos rebeldes, los policias te escoltaran" +
-                                                "Buena Suerte....");
-                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
-                                            conditionsMet = true;
-                                            break;
-                                        }
-
-                                    }
+                                    Console.WriteLine("Narrador - Tocas la puerta de la casa de Natalia, pero no escuhas respuesta");
                                 }
-
+                                Console.WriteLine("");
+                                Console.WriteLine("Te diriges a su casa pero al parecer no hay ninguna luz prendida. [Te alejas]");
+                                FileControl.allTheThingsTemp.Clear();
+                                conditionsMet = true;
+                                break;
                             }
 
                         }

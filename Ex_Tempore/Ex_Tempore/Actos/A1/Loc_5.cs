@@ -38,15 +38,17 @@ namespace Ex_Tempore.Actos.A1
                 {
                     if (opcion.ToString() == "a")
                     {
+                        Console.WriteLine("Bueno digamos que no tienes opción.");
                         FileControl.AddRespuestasTemp("respuestas_CuartoBlancoA.txt");
                         FileControl.AddOpcionesTemp("opciones_CuartoBlancoA.txt");
-                        Console.WriteLine("\n" + value);
-                        FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+                     
+                        //FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
                         while (FileControl.allTheThingsTemp.Count > 0)
                         {
                             foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
                             {
-
+                                Console.WriteLine("Opciones:");
+                                Console.WriteLine("a Aceptar");
                                 string value1 = entry1.Value;
                                 int key1 = entry1.Key.Count();
                                 if (FileControl.allTheThingsTemp.Count == 0)
@@ -57,13 +59,14 @@ namespace Ex_Tempore.Actos.A1
                                 {
                                     if (opcion.ToString() == entry.Key)
                                     {
+
                                         char opcion2 = Console.ReadKey().KeyChar;
+                                        
                                         if (opcion2.ToString() == "a")
                                         {
-                                            Console.WriteLine("\nBueno no es cuestion de que quieras o no," +
-                                                "los policias te lleavran de vuekta al distrito," +
-                                                "necesito que acabes con los rebeldes.");
-                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            Console.WriteLine("\n" + value1);
+
+                                            FileControl.allTheThingsTemp.Clear();
                                             conditionsMet = true;
                                             break;
                                         }
@@ -100,10 +103,8 @@ namespace Ex_Tempore.Actos.A1
                                         char opcion2 = Console.ReadKey().KeyChar;
                                         if (opcion2.ToString() == "a")
                                         {
-                                            Console.WriteLine("\nMe gusta tu actitud lamentablemente esto no esta en discusión" +
-                                                "Mataras a unos cuantos rebeldes, los policias te escoltaran" +
-                                                "Buena Suerte....");
-                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            Console.WriteLine("\n" + value1);
+                                            FileControl.allTheThingsTemp.Clear();
                                             conditionsMet = true;
                                             break;
                                         }

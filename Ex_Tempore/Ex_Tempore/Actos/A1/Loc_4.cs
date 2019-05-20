@@ -50,17 +50,21 @@ namespace Ex_Tempore.Actos.A1
                                 {
                                     if (opcion.ToString() == entry.Key)
                                     {
+                                        //FileControl.allTheThingsTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+
                                         char opcion2 = Console.ReadKey().KeyChar;
                                         if (opcion2.ToString() == "a")
                                         {
                                             Console.WriteLine("\n" + value1);
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            FileControl.allTheThingsTemp.Clear();
                                             break;
                                         }
                                         else if (opcion2.ToString() == "b")
                                         {
                                             Console.WriteLine("\n" + value1);
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            FileControl.allTheThingsTemp.Clear();
                                             break;
 
                                         }
@@ -68,6 +72,7 @@ namespace Ex_Tempore.Actos.A1
                                         {
                                             Console.WriteLine("\n" + value1);
                                             FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            FileControl.allTheThingsTemp.Clear();
                                             break;
 
                                         }

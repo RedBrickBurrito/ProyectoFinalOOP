@@ -23,187 +23,206 @@ namespace Ex_Tempore.Control
 
         public void play()
         {
+            bool gameisOver = false;
 
-            //En los parametros va el nombre del archivo en texto
-            FileControl.readOpciones("opcionesA1_1.0.txt");
-            FileControl.readRespuestas("respuestasA1_1.txt");
-
-            Console.WriteLine(l1.getDescription());
-
-
-
-            if (Location.mochila.space > 0)
+            while (!gameisOver)
             {
-                while (FileControl.allTheThings.Count > 0)
+                //En los parametros va el nombre del archivo en texto
+                FileControl.readOpciones("opcionesA1_1.0.txt");
+                FileControl.readRespuestas("respuestasA1_1.txt");
+
+                Console.WriteLine(l1.getDescription());
+
+
+
+                if (Location.mochila.space > 0)
                 {
-
-                    if (l1.conditionsMet == true && l1.seguir == false || FileControl.allTheThings.Count == 0)
+                    while (FileControl.allTheThings.Count > 0)
                     {
-                        Console.WriteLine("\nQue quieres hacer?");
-                        Console.WriteLine("\nOpciones:");
-                        Console.WriteLine("\na Seguir Investigando");
-                        Console.WriteLine("b Abrir la puerta");
-                        char opcion2 = Console.ReadKey().KeyChar;
 
-                        if (opcion2.ToString() == "a")
+                        if (l1.conditionsMet == true && l1.seguir == false || FileControl.allTheThings.Count == 0)
                         {
-                            l1.seguir = true;
-                            Console.WriteLine("\n");
+                            Console.WriteLine("\nQue quieres hacer?");
+                            Console.WriteLine("\nOpciones:");
+                            Console.WriteLine("\na Seguir Investigando");
+                            Console.WriteLine("b Abrir la puerta");
+                            char opcion2 = Console.ReadKey().KeyChar;
+
+                            if (opcion2.ToString() == "a")
+                            {
+                                l1.seguir = true;
+                                Console.WriteLine("\n");
+                            }
+                            else if (opcion2.ToString() == "b")
+                            {
+                                FileControl.clear();
+                                break;
+                            }
+
                         }
-                        else if (opcion2.ToString() == "b")
+                        else
                         {
-                            FileControl.clear();
+                            Console.WriteLine("\nOpciones: ");
+                            Console.WriteLine(" ");
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+
+                            Console.WriteLine(l1.getOpciones());
+                        }
+
+
+
+                    }
+
+
+
+                    FileControl.Add("opciones_Pasillo.txt", "respuestas_Pasillo.txt");
+                    Console.WriteLine(l2.getDescription());
+
+                    l2.conditionsMet = false;
+                    l2.seguir = true;
+
+                    while (FileControl.allTheThings.Count > 0)
+                    {
+                        if (l2.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                        {
                             break;
                         }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l2.getOpciones());
+                        }
 
                     }
-                    else
+
+                    FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
+                    FileControl.clearOpcionesTemp();
+                    FileControl.clearRespuestasTemp();
+                    Console.WriteLine(l3.getDescription());
+
+                    l3.conditionsMet = false;
+                    l3.endThis = false;
+
+                    while (FileControl.allTheThings.Count > 0)
                     {
-                        Console.WriteLine("\nOpciones: ");
-                        Console.WriteLine(" ");
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
-
-                        Console.WriteLine(l1.getOpciones());
+                        if (l3.endThis == true || FileControl.allTheThings.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l3.getOpciones());
+                        }
                     }
+
+
+                    FileControl.Add("opciones_Distrito.txt", "respuestas_Distrito.txt");
+                    FileControl.clearOpcionesTemp();
+                    FileControl.clearRespuestasTemp();
+                    Console.WriteLine(l4.getDescription());
+
+                    l4.conditionsMet = false;
+                    l4.endThis = false;
+
+                    while (FileControl.allTheThings.Count > 0)
+                    {
+                        if (l4.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l4.getOpciones());
+                        }
+                    }
+
+                    FileControl.Add("opciones_CuartoBlanco.txt", "respuestas_CuartoBlanco.txt");
+                    FileControl.clearOpcionesTemp();
+                    FileControl.clearRespuestasTemp();
+                    Console.WriteLine(l5.getDescription());
+
+                    l5.conditionsMet = false;
+                    l5.endThis = false;
+
+                    while (FileControl.allTheThings.Count > 0)
+                    {
+                        if (l5.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l5.getOpciones());
+                        }
+                    }
+
+                    FileControl.Add("opciones_DistritoNoche.txt", "respuestas_DistritoNoche.txt");
+                    FileControl.clearOpcionesTemp();
+                    FileControl.clearRespuestasTemp();
+                    Console.WriteLine(l6.getDescription());
+
+                    l6.conditionsMet = false;
+                    l6.endThis = false;
+
+                    while (FileControl.allTheThings.Count > 0)
+                    {
+                        if (l6.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l6.getOpciones());
+                        }
+                    }
+
+                    FileControl.Add("opciones_Guarida.txt", "respuestas_Guarida.txt");
+                    FileControl.clearOpcionesTemp();
+                    FileControl.clearRespuestasTemp();
+                    Console.WriteLine(l7.getDescription());
+
+                    l7.conditionsMet = false;
+                    l7.endThis = false;
+
+                    while (FileControl.allTheThings.Count > 0)
+                    {
+                        if (l7.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                            Console.WriteLine(l7.getOpciones());
+                        }
+                    }
+
+
+                    Console.WriteLine("\nHaz llegado al final de esta historia, garcias por jugar.");
+                    Console.WriteLine("\n Presiona Esc para continuar...");
+                    do
+                    {
+                        while (!Console.KeyAvailable)
+                        {
+                            FileControl.allTheThings.Clear();
+                            FileControl.respuestas.Clear();
+                            gameisOver = true;
+                        }
+                    } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
 
 
 
                 }
-
-
-
-                FileControl.Add("opciones_Pasillo.txt", "respuestas_Pasillo.txt");
-                Console.WriteLine(l2.getDescription());
-
-                l2.conditionsMet = false;
-                l2.seguir = true;
-
-                while (FileControl.allTheThings.Count > 0)
+                else if (Location.mochila.space == 0)
                 {
-                    if (l2.conditionsMet == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l2.getOpciones());
-                    }
-
+                    Console.WriteLine("Se te acabo el espcaio de mochila");
                 }
 
-                FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
-                FileControl.clearOpcionesTemp();
-                FileControl.clearRespuestasTemp();
-                Console.WriteLine(l3.getDescription());
-
-                l3.conditionsMet = false;
-                l3.endThis = false;
-
-                while (FileControl.allTheThings.Count > 0)
-                {
-                    if (l3.endThis == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l3.getOpciones());
-                    }
-                }
-
-
-                FileControl.Add("opciones_Distrito.txt", "respuestas_Distrito.txt");
-                FileControl.clearOpcionesTemp();
-                FileControl.clearRespuestasTemp();
-                Console.WriteLine(l4.getDescription());
-
-                l4.conditionsMet = false;
-                l4.endThis = false;
-
-                while (FileControl.allTheThings.Count > 0)
-                {
-                    if (l4.conditionsMet == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l4.getOpciones());
-                    }
-                }
-
-                FileControl.Add("opciones_CuartoBlanco.txt", "respuestas_CuartoBlanco.txt");
-                FileControl.clearOpcionesTemp();
-                FileControl.clearRespuestasTemp();
-                Console.WriteLine(l5.getDescription());
-
-                l5.conditionsMet = false;
-                l5.endThis = false;
-
-                while (FileControl.allTheThings.Count > 0)
-                {
-                    if (l5.conditionsMet == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l5.getOpciones());
-                    }
-                }
-
-                FileControl.Add("opciones_DistritoNoche.txt", "respuestas_DistritoNoche.txt");
-                FileControl.clearOpcionesTemp();
-                FileControl.clearRespuestasTemp();
-                Console.WriteLine(l6.getDescription());
-
-                l6.conditionsMet = false;
-                l6.endThis = false;
-
-                while (FileControl.allTheThings.Count > 0)
-                {
-                    if (l6.conditionsMet == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l6.getOpciones());
-                    }
-                }
-
-                FileControl.Add("opciones_Guarida.txt", "respuestas_Guarida.txt");
-                FileControl.clearOpcionesTemp();
-                FileControl.clearRespuestasTemp();
-                Console.WriteLine(l7.getDescription());
-
-                l7.conditionsMet = false;
-                l7.endThis = false;
-
-                while (FileControl.allTheThings.Count > 0)
-                {
-                    if (l7.conditionsMet == true || FileControl.allTheThings.Count == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                        Console.WriteLine(l7.getOpciones());
-                    }
-                }
-
-
-            } else if(Location.mochila.space == 0)
-                    {
-                Console.WriteLine("Se te acabo el espcaio de mochila");
             }
-                    
         }
 
     }

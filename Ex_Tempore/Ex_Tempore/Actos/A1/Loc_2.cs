@@ -17,7 +17,7 @@ namespace Ex_Tempore.Actos.A1
 
             //roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
 
-            roomDescription = "Abres la puerta y te encuentras en un pasillo, con dos puertas a los lados. " +
+            roomDescription = "\nAbres la puerta y te encuentras en un pasillo, con dos puertas a los lados. " +
                 "Escuchas un ruido, al final de pasillo.";
 
 

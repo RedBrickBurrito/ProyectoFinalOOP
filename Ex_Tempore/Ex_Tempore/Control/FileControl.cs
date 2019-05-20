@@ -64,7 +64,7 @@ namespace Ex_Tempore.Control
                         continue;
                     else if (bananaSplits.Length == 2) // Easy part. If there are 2 results, add them to the dictionary
                         respuestas.Add(bananaSplits[0].Trim(), bananaSplits[1].Trim());
-                    // else if (bananaSplits.Length > 2)
+                     //else if (bananaSplits.Length > 2)
                     //SplitItGood(splitMe, allTheThings); // Hard part. If there are more than 2 results, use the method below.
                 }
             }
