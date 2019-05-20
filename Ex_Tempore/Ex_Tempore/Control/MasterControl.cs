@@ -18,6 +18,10 @@ namespace Ex_Tempore.Control
 
 
 
+        Loc_7 l7 = new Loc_7();
+
+
+
         public void play()
         {
 
@@ -110,7 +114,20 @@ namespace Ex_Tempore.Control
             }
 
 
+
        
+
+            FileControl.Add("opciones_.txt", "respuestas_CuartoNatalia.txt");
+            FileControl.clearOpcionesTemp();
+            FileControl.clearRespuestasTemp();
+            Console.WriteLine(l3.getDescription());
+
+            l4.conditionsMet = false;
+            l4.endThis = false;
+
+            
+
+
         }
 
     }
