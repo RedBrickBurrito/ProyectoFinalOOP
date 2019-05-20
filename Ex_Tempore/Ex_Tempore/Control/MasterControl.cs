@@ -14,6 +14,7 @@ namespace Ex_Tempore.Control
         Loc_1 l1 = new Loc_1();
         Loc_2 l2 = new Loc_2();
         Loc_3 l3 = new Loc_3();
+        loc_7 l7 = new loc_7();
 
 
         public void play()
@@ -86,24 +87,46 @@ namespace Ex_Tempore.Control
 
             }
 
-            FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
+            //FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
+            //FileControl.clearOpcionesTemp();
+            //FileControl.clearRespuestasTemp();
+            //Console.WriteLine(l3.getDescription());
+
+            //l3.conditionsMet = false;
+            //l3.endThis = false;
+
+            //while (FileControl.allTheThings.Count > 0)
+            //{
+            //    if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+            //        Console.WriteLine(l3.getOpciones());
+            //    }
+            //}
+
+
+            FileControl.Add("opciones_Guarida.txt", "respuestas_Guarida.txt");
             FileControl.clearOpcionesTemp();
             FileControl.clearRespuestasTemp();
-            Console.WriteLine(l3.getDescription());
+            Console.WriteLine(l7.getDescription());
 
-            l3.conditionsMet = false;
-            l3.endThis = false;
+            l7.conditionsMet = false;
+            l7.endThis = false;
 
             while (FileControl.allTheThings.Count > 0)
             {
-                if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                if (l7.conditionsMet == true || FileControl.allTheThings.Count == 0)
                 {
                     break;
                 }
                 else
                 {
                     FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                    Console.WriteLine(l3.getOpciones());
+                    Console.WriteLine(l7.getOpciones());
                 }
             }
 
