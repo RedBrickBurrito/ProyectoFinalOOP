@@ -1,2 +1,1 @@
-a:Examinas la pila de juguetes pero no encuentras nada interesante.
-b:Sales del cuarto hacia el pasillo.
+a:Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.

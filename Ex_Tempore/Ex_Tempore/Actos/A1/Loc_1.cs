@@ -10,10 +10,10 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_1:Location
     {
-       
-       
+
 
         
+
         public Loc_1()
         {
             //falta añadir las locaciosnes por texto

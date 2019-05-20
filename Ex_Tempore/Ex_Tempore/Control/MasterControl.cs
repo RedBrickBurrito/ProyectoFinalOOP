@@ -21,12 +21,12 @@ namespace Ex_Tempore.Control
             //En los parametros va el nombre del archivo en texto
             FileControl.readOpciones("opcionesA1_1.0.txt");
             FileControl.readRespuestas("respuestasA1_1.txt");
- 
+
             Console.WriteLine(l1.getDescription());
 
 
-            
-           
+
+
             while (FileControl.allTheThings.Count > 0)
             {
 
@@ -38,7 +38,7 @@ namespace Ex_Tempore.Control
                     Console.WriteLine("b Abrir la puerta");
                     char opcion2 = Console.ReadKey().KeyChar;
 
-                   if(opcion2.ToString() == "a")
+                    if (opcion2.ToString() == "a")
                     {
                         l1.seguir = true;
                         Console.WriteLine("\n");
@@ -55,25 +55,37 @@ namespace Ex_Tempore.Control
                     Console.WriteLine("\nOpciones: ");
                     Console.WriteLine(" ");
                     FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
-                  
+
                     Console.WriteLine(l1.getOpciones());
                 }
 
-      
+
 
             }
-
+        
+            
  
             FileControl.Add("opciones_Pasillo.txt", "respuestas_Pasillo.txt");
-            Console.WriteLine(l1.getDescription());
+            Console.WriteLine(l2.getDescription());
+
+            l2.conditionsMet = false;
+            l2.seguir = true;
 
             while (FileControl.allTheThings.Count > 0)
             {
-
-                FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                Console.WriteLine(l1.getOpciones());
+                if (l2.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                    Console.WriteLine(l2.getOpciones());
+                }
 
             }
+
+            Console.WriteLine("si jalop");
 
 
 
