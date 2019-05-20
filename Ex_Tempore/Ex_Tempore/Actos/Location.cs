@@ -13,10 +13,13 @@ namespace Ex_Tempore.Actos
         public string roomDescription;
         public bool conditionsMet = false;
         public static FileControl readopciones = new FileControl();
+        public static FileControl readopcionesTemp = new FileControl();
+        public static FileControl readrespuestasTemp = new FileControl();
         public static Inventory mochila = new Inventory("mochila", true, "Una mochila donde puedes guardar 10 cosas", false, 10);
         public static Inventory llave = new Inventory("llave", true, "una llave para abrir una puerta", false, 0);
-
-        public bool confitionsMet = false;
+        public static Inventory botellaAgua = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
+        public static Inventory antibioticos = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
+        public static Inventory vendas = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
         public bool seguir = false;
 
 

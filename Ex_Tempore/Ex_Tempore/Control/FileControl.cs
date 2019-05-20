@@ -11,10 +11,17 @@ namespace Ex_Tempore.Control
 {
     class FileControl
     {
+     
         static public Dictionary<string, string> allTheThings = new Dictionary<string, string>();
         static public Dictionary<string, string> respuestas = new Dictionary<string, string>();
+
+        static public Dictionary<string, string> allTheThingsTemp = new Dictionary<string, string>();
+        static public Dictionary<string, string> respuestasTemp = new Dictionary<string, string>();
         static public List<string> roomDescriptions = new List<string>();
-        
+
+ 
+
+
 
         public static void readOpciones(string filepath)
         {
@@ -63,6 +70,53 @@ namespace Ex_Tempore.Control
             }
         }
 
+        public static void readOpcionesTemp(string filepath)
+        {
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //filepath esta en mastercontrol
+            string opciones = dir + @"\Textos\Opciones\" + filepath;
+
+            // los archivos se suben a la carpeta Debug que esta adentro de bin
+            using (StreamReader sr = new StreamReader(opciones))
+            {
+                while (!sr.EndOfStream) // Keep reading until we get to the end
+                {
+                    string splitMe = sr.ReadLine();
+                    string[] bananaSplits = splitMe.Split(new char[] { ':' }); //Split at the space
+
+                    if (bananaSplits.Length < 2) // If we get less than 2 results, discard them
+                        continue;
+                    else if (bananaSplits.Length == 2) // Easy part. If there are 2 results, add them to the dictionary
+                        allTheThingsTemp.Add(bananaSplits[0].Trim(), bananaSplits[1].Trim());
+                    // else if (bananaSplits.Length > 2)
+                    //SplitItGood(splitMe, allTheThings); // Hard part. If there are more than 2 results, use the method below.
+                }
+            }
+        }
+
+        public static void readRespuestasTemp(string filepath)
+        {
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //filepath esta en mastercontrol
+            string respuestas1 = dir + @"\Textos\Respuestas\" + filepath;
+
+            using (StreamReader sr = new StreamReader(respuestas1))
+            {
+                while (!sr.EndOfStream) // Keep reading until we get to the end
+                {
+                    string splitMe = sr.ReadLine();
+                    string[] bananaSplits = splitMe.Split(new char[] { ':' }); //Split at the space
+
+                    if (bananaSplits.Length < 2) // If we get less than 2 results, discard them
+                        continue;
+                    else if (bananaSplits.Length == 2) // Easy part. If there are 2 results, add them to the dictionary
+                        respuestasTemp.Add(bananaSplits[0].Trim(), bananaSplits[1].Trim());
+                    // else if (bananaSplits.Length > 2)
+                    //SplitItGood(splitMe, allTheThings); // Hard part. If there are more than 2 results, use the method below.
+                }
+            }
+        }
+
         public static string addRoomDescription(string filepath)
         {
             string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -92,11 +146,34 @@ namespace Ex_Tempore.Control
             respuestas.Clear();
         }
 
+        public static void clearOpcionesTemp()
+        {
+            allTheThingsTemp.Clear();
+        }
+
+        public static void clearRespuestasTemp()
+        {
+
+            respuestasTemp.Clear();
+        }
+
         public static void Add(string opciones,string respuestas)
         {
             clear();
             readOpciones(opciones);
             readRespuestas(respuestas);
+        }
+
+        public static void AddOpcionesTemp(string opciones)
+        {
+            clearOpcionesTemp();
+            readOpcionesTemp(opciones);
+        }
+
+        public static void AddRespuestasTemp(string respuestas)
+        {
+            clearRespuestasTemp();
+            readRespuestasTemp(respuestas);
         }
     }
 }
