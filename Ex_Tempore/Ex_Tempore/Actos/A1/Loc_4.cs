@@ -10,7 +10,10 @@ namespace Ex_Tempore.Actos.A1
     {
         public Loc_4()
         {
-            //afuera distritpo
+            roomDescription = "Te encuentras en un páramo de casas con techos de lámina, " +
+                " paredes con agujeros y paredes descarapeladas, " +
+                " en general está lleno de basura y el olor es es nauseabundo. " +
+                " Cerca está un tambo encendido en llamas donde está un grupo de gente discutiendo mientras están calentándose las manos." +
         }
     }
 }

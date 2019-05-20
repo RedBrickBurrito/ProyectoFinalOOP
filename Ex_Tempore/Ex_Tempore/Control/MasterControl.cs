@@ -14,7 +14,8 @@ namespace Ex_Tempore.Control
         Loc_1 l1 = new Loc_1();
         Loc_2 l2 = new Loc_2();
         Loc_3 l3 = new Loc_3();
-        loc_7 l7 = new loc_7();
+        Loc_4 l4 = new Loc_4();
+        Loc_7 l7 = new Loc_7();
 
 
         public void play()
@@ -109,9 +110,15 @@ namespace Ex_Tempore.Control
             }
 
 
+            FileControl.Add("opciones_.txt", "respuestas_CuartoNatalia.txt");
+            FileControl.clearOpcionesTemp();
+            FileControl.clearRespuestasTemp();
+            Console.WriteLine(l3.getDescription());
 
+            l4.conditionsMet = false;
+            l4.endThis = false;
 
-            Console.WriteLine("Check good");
+            
 
         }
 
