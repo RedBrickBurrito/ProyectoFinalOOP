@@ -1,0 +1,4 @@
+﻿a:Tranquila linda, no te alteres quería ver como respondias [+1 romance].
+Natalia: Quien te dio permiso de llamarme Linda, idiota. Sal de aquí!!! [EXIT Location 1]
+b:Vaya me despierto con un terrible dolor de cabeza, y lo primero que escucho son regaños de una niña. [-1 amistad]
+Natalia: Sal de mi casa idiota!!! [EXIT Location 1]
