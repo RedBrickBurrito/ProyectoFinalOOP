@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex_Tempore.Actos.A1
 {
-    class Loc_4
+    class Loc_4 : Location
     {
         public Loc_4()
         {

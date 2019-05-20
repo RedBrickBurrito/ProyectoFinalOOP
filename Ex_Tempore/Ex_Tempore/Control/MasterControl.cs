@@ -14,6 +14,7 @@ namespace Ex_Tempore.Control
         Loc_1 l1 = new Loc_1();
         Loc_2 l2 = new Loc_2();
         Loc_3 l3 = new Loc_3();
+        loc_7 l7 = new loc_7();
 
 
         public void play()
@@ -106,6 +107,9 @@ namespace Ex_Tempore.Control
                     Console.WriteLine(l3.getOpciones());
                 }
             }
+
+
+
 
             Console.WriteLine("Check good");
 
