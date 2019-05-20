@@ -1,0 +1,2 @@
+﻿a:Hombre Armado: Nosotros escuchamos disparos y por eso vendras con nosotros, tenemos preguntas sobre tu arma. [El hombre amarra tus manos y te escolta ]
+b:[Uno de los hombres dispara primero y te pega un dardo que te electrocuta y caes al piso noqueado]

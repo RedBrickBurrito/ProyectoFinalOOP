@@ -1,0 +1,3 @@
+﻿a:Te diriges al tambo lleno de fuego.
+b:Te diriges a la patrulla( checa si has completado la misión). Como no has acabado la mision los oficiales no te dejan entrar[Regresas a las opciones anteriores]
+c:Te diriges a la casa de Natalia.

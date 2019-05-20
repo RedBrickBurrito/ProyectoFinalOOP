@@ -1,0 +1,2 @@
+﻿a:Hombre Armado: Aunque eso sea verdad, te tenemos que tomar cautivo. [El hombre amarra tus manos y te escolta ]
+b:Hombre Armado: Aunque eso sea verdad, te tenemos que tomar cautivo. [El hombre amarra tus manos y te escolta ]
