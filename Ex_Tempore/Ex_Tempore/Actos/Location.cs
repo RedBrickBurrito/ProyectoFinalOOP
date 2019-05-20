@@ -20,6 +20,7 @@ namespace Ex_Tempore.Actos
         public static Inventory botellaAgua = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
         public static Inventory antibioticos = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
         public static Inventory vendas = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
+        public static Inventory armadefuego = new Inventory("arma de fuego", false, "un arma de fuego", false, 1);
         public bool seguir = false;
         public bool endThis = false;
         public int amistadNatalia = 0;
