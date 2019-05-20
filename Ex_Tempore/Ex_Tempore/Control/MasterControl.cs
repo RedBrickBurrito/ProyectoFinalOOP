@@ -87,48 +87,29 @@ namespace Ex_Tempore.Control
 
             }
 
-            //FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
-            //FileControl.clearOpcionesTemp();
-            //FileControl.clearRespuestasTemp();
-            //Console.WriteLine(l3.getDescription());
-
-            //l3.conditionsMet = false;
-            //l3.endThis = false;
-
-            //while (FileControl.allTheThings.Count > 0)
-            //{
-            //    if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
-            //    {
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-            //        Console.WriteLine(l3.getOpciones());
-            //    }
-            //}
-
-
-            FileControl.Add("opciones_Guarida.txt", "respuestas_Guarida.txt");
+            FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
             FileControl.clearOpcionesTemp();
             FileControl.clearRespuestasTemp();
-            Console.WriteLine(l7.getDescription());
+            Console.WriteLine(l3.getDescription());
 
-            l7.conditionsMet = false;
-            l7.endThis = false;
+            l3.conditionsMet = false;
+            l3.endThis = false;
 
             while (FileControl.allTheThings.Count > 0)
             {
-                if (l7.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
                 {
                     break;
                 }
                 else
                 {
                     FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
-                    Console.WriteLine(l7.getOpciones());
+                    Console.WriteLine(l3.getOpciones());
                 }
             }
+
+
+
 
             Console.WriteLine("Check good");
 
