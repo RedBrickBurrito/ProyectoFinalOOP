@@ -1,0 +1,3 @@
+a:Tomas las vendas y paras el sangrado.
+b:Sigues adelante un par de metros, pero caes al suelo. Haz perdido demasiada sangre. Tu historia termina aquí.
+c:(Dependiendo de tu nivel de amistad: +1 o neutral( 0) = Pero que te ha pasado, dios mio. Entra, entra ire por mi botiquín.  -1 = Nadie responde la puerta, y mueres debido al sangrado. Tu historia termina aquí.)
