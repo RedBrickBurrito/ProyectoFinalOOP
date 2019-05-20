@@ -10,8 +10,8 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_2 : Location
     {
+        public bool endThis = false;
 
-        
 
         public Loc_2()
         {
@@ -28,7 +28,7 @@ namespace Ex_Tempore.Actos.A1
         public string getOpciones()
         {
             char opcion = Console.ReadKey().KeyChar;
-
+            Console.WriteLine("");
 
 
 
@@ -42,51 +42,82 @@ namespace Ex_Tempore.Actos.A1
 
                 if (opcion.ToString() == entry.Key)
                 {
-                    if(opcion.ToString() == "a")
+
+                    if (opcion.ToString() == "a")
                     {
                         Console.WriteLine("Examinas la pila de juguetes pero no encuentras nada interesante.Sales del cuarto hacia el pasillo.");
                         FileControl.allTheThings.Remove(entry.Key);
                     }
-                    else if(opcion.ToString() == "b")
+                    else if (opcion.ToString() == "b")
                     {
+
+
+
                         FileControl.AddRespuestasTemp("respuestas_CuartoDerecha.txt");
+                        FileControl.AddOpcionesTemp("opciones_CuartoDerecha.txt");
+                        Console.WriteLine("\n" + value);
+                        Console.WriteLine("");
+                        FileControl.respuestasTemp.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
+                   
 
-                        foreach(KeyValuePair<string,string> entry1 in FileControl.respuestasTemp)
+
+                        while (FileControl.allTheThingsTemp.Count > 0)
                         {
-                            char opcion2 = Console.ReadKey().KeyChar;
+                            foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
+                            {
+                        
+                                if (FileControl.allTheThingsTemp.Count == 0)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    if (opcion.ToString() == entry.Key)
+                                    {
+                                        char opcion2 = Console.ReadKey().KeyChar;
+                                        if (opcion2.ToString() == "a")
+                                        {
+                                            mochila.space -= 1;
+                                            botellaAgua.useable = true;
+                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            Console.WriteLine("\nHaz guardado el agua en tu mochila");
+                                           
 
-                            if (opcion2.ToString() == "a")
-                            {
-                                mochila.space -= 1;
-                                botellaAgua.useable = true;
-                                FileControl.respuestasTemp.Remove(entry1.Key);
-                                break;
+
+                                        }
+                                        else if (opcion2.ToString() == "b")
+                                        {
+                                            mochila.space -= 1;
+                                            antibioticos.useable = true;
+                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            Console.WriteLine("\nHaz guardado los antibioticos en tu mochila");
+
+
+                                        }
+                                        else if (opcion2.ToString() == "c")
+                                        {
+                                            mochila.space -= 1;
+                                            vendas.useable = true;
+                                            FileControl.allTheThingsTemp.Remove(entry1.Key);
+                                            Console.WriteLine("\nHaz guardado las vendas en tu mochila");
+
+
+                                        }
+                                        else if (opcion2.ToString() == "d")
+                                        {
+
+                                            FileControl.allTheThingsTemp.Clear();
+
+                                        }
+                                    }
+                                }
 
                             }
-                            else if(opcion2.ToString() == "b")
-                            {
-                                mochila.space -= 1;
-                                antibioticos.useable = true;
-                                FileControl.respuestasTemp.Remove(entry1.Key);
-                                break;
-                            }
-                            else if(opcion2.ToString() == "c")
-                            {
-                                mochila.space -= 1;
-                                vendas.useable = true;
-                                 FileControl.respuestasTemp.Remove(entry1.Key);
-                                break;
-                            }
-                            else if(opcion2.ToString() == "d")
-                            {
-                                break;
-                            }
+
                         }
-
-                        FileControl.readRespuestas("respuestas_CuartoDerecha.txt");
-                        FileControl.allTheThings.Remove(entry.Key);
+                        
                     }
-                    else if(opcion.ToString() == "c")
+                    else if (opcion.ToString() == "c" || endThis == true)
                     {
                         conditionsMet = true;
                         FileControl.clear();
