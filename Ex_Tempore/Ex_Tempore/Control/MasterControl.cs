@@ -13,6 +13,7 @@ namespace Ex_Tempore.Control
     {
         Loc_1 l1 = new Loc_1();
         Loc_2 l2 = new Loc_2();
+        Loc_3 l3 = new Loc_3();
 
 
         public void play()
@@ -85,11 +86,28 @@ namespace Ex_Tempore.Control
 
             }
 
-            Console.WriteLine("si jalop");
+            FileControl.Add("opciones_CuartoNatalia.txt", "respuestas_CuartoNatalia.txt");
+            FileControl.clearOpcionesTemp();
+            FileControl.clearRespuestasTemp();
+            Console.WriteLine(l3.getDescription());
 
+            l3.conditionsMet = false;
+            l3.endThis = false;
 
+            while (FileControl.allTheThings.Count > 0)
+            {
+                if (l3.conditionsMet == true || FileControl.allTheThings.Count == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(x.Key + " " + x.Value));
+                    Console.WriteLine(l3.getOpciones());
+                }
+            }
 
-
+            Console.WriteLine("Check good");
 
         }
 

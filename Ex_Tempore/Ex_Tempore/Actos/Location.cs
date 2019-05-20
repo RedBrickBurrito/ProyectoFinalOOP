@@ -21,6 +21,7 @@ namespace Ex_Tempore.Actos
         public static Inventory antibioticos = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
         public static Inventory vendas = new Inventory("botella de agua", false, "una botella con agua pura", false, 1);
         public bool seguir = false;
+        public bool endThis = false;
 
 
         public Location()

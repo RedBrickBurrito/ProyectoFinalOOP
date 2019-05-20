@@ -10,7 +10,6 @@ namespace Ex_Tempore.Actos.A1
 {
     class Loc_2 : Location
     {
-        public bool endThis = false;
 
 
         public Loc_2()
@@ -29,10 +28,6 @@ namespace Ex_Tempore.Actos.A1
         {
             char opcion = Console.ReadKey().KeyChar;
             Console.WriteLine("");
-
-
-
-
 
             foreach (KeyValuePair<string, string> entry in FileControl.respuestas)
             {
@@ -65,6 +60,7 @@ namespace Ex_Tempore.Actos.A1
                         {
                             foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
                             {
+                                Console.Clear();
                         
                                 if (FileControl.allTheThingsTemp.Count == 0)
                                 {
