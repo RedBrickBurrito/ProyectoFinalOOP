@@ -1,0 +1,3 @@
+﻿a:Tomar las vendas. ( si tienes las vendas )
+b:Seguir adelante ( muerte segura )
+c:Regresar a la casa de Natalia.

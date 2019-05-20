@@ -1,0 +1,2 @@
+﻿a:Natalia: No hay de qué, pero ya no te metas en problemas por favor. (+1 amistad ) (EXIT LOC_1).
+b:Natalia: Si, es un sujeto que siempre se mete en problemas, principalmente he escuchado que ha estado comprando armas en el mercado negro para su pequeño grupo de rebeldes, si me preguntas a mi creo que es mucho riesgo, la policía tiene demasiado poder en este sector. *Sales de la habitación*
