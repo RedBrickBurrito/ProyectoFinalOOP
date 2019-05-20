@@ -16,14 +16,15 @@ namespace Ex_Tempore.Actos.A1
 
         public Loc_1()
         {
-            //falta añadir las locaciosnes por texto
-            roomDescription = FileControl.addRoomDescription("Loc_A1.txt");
+
 
             roomDescription = "Haz despertado en una habitación sucia y destrozada." +
                 " \nTe duele la cabeza y tardas un tiempo en ponerte de pie." +
                 "Lo único que tienes puesto es ropa desgastada." +
                 "\nMiras a tu alrededor y hay una variedad de objetos;\n" +
                 "un periódico, una foto,una llave,un uniforme sin usar, y una mochila un poco desgastada.";
+            FileControl.recorrido.Add(roomDescription);
+
 
 
         }
@@ -51,12 +52,12 @@ namespace Ex_Tempore.Actos.A1
                 {
                     if (opcion.ToString() == "c" && mochila.isAlive == false)
                     {
-                        FileControl.Recorrido.Add("no tienes donde guardarla");
+                        FileControl.recorrido.Add("no tienes donde guardarla");
                         Console.WriteLine("\n no tienes donde guardarla");
                     }
                     else if (opcion.ToString() == "c" && mochila.isAlive == true)
                     {
-                        FileControl.Recorrido.Add(value);
+                        FileControl.recorrido.Add(value);
                         Console.WriteLine("\n" + value);
 
                         mochila.space -= 1;
@@ -66,7 +67,7 @@ namespace Ex_Tempore.Actos.A1
                     }
                     else if (opcion.ToString() == "e")
                     {
-                        FileControl.Recorrido.Add(value);
+                        FileControl.recorrido.Add(value);
                         mochila.isAlive = true;
                         Console.WriteLine("\n" + value);
                         FileControl.allTheThings.Remove(entry.Key);
@@ -76,7 +77,7 @@ namespace Ex_Tempore.Actos.A1
                    
                     else
                     {
-                        FileControl.Recorrido.Add(value);
+                        FileControl.recorrido.Add(value);
                         Console.WriteLine("\n" + value);
                         FileControl.allTheThings.Remove(entry.Key);
                     }

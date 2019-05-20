@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Ex_Tempore.Actos.A1;
 using Ex_Tempore.Actos;
 using Ex_Tempore.Control;
+using System.IO;
 
 namespace Ex_Tempore.Control
 {
@@ -50,13 +51,13 @@ namespace Ex_Tempore.Control
 
                             if (opcion2.ToString() == "a")
                             {
-                                FileControl.Recorrido.Add("Seguir Investigando");
+                                FileControl.recorrido.Add("Seguir Investigando");
                                 l1.seguir = true;
                                 Console.WriteLine("\n");
                             }
                             else if (opcion2.ToString() == "b")
                             {
-                                FileControl.Recorrido.Add("Abrir puerta");
+                                FileControl.recorrido.Add("Abrir puerta");
                                 FileControl.clear();
                                 break;
                             }
@@ -64,6 +65,7 @@ namespace Ex_Tempore.Control
                         }
                         else
                         {
+                            FileControl.recorrido.Add("Opciones:");
                             Console.WriteLine("\nOpciones: ");
                             Console.WriteLine(" ");
                             FileControl.allTheThings.ToList().ForEach(x => Console.WriteLine(" " + x.Key + " " + x.Value));
@@ -211,6 +213,7 @@ namespace Ex_Tempore.Control
 
 
                     Console.WriteLine("\nHaz llegado al final de esta historia, garcias por jugar.");
+                    FileControl.Recorrido();
                     Console.WriteLine("\n Presiona Esc para continuar...");
                     do
                     {
