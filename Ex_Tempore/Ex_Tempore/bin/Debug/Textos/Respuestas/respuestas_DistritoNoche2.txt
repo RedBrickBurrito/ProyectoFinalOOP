@@ -1,0 +1,2 @@
+a:Natalia: No son delincuentes, son personas con buen corazon y excelente motivos de hacer lo que hacen, necesitas conocerlos para que entiendas a lo que me refiero. [Saltear Linea]Le pides a Natalia que te lleve con ellos y acepta despues de reflexionar un momento. [Te llevan a la guarida de los delincuentes]
+b:Natalia: Oh sí estoy bien gracias, por favor cuidate y cuida las amistades que llegas hacer.

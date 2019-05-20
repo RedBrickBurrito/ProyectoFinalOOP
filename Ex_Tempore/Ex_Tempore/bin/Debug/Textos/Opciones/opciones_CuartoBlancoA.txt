@@ -1,0 +1,2 @@
+﻿a:Acepto
+b:Debo pensarlo [Regresar a las opciones anteriores -amistad]

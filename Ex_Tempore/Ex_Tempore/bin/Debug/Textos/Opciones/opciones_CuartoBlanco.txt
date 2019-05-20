@@ -1,0 +1,2 @@
+﻿a:Porque deberia de confiar en alguien que me acaba de traer a la fuerza a este cuarto
+b:Desde cuando eres tú quien da órdenes.[-1 amistad]
