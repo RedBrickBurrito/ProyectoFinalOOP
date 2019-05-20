@@ -13,8 +13,10 @@ namespace Ex_Tempore.Control
         public bool isAlive = false;
         public byte space = 0;
         public bool useable = false;
+        public int ammo = 0;
         private bool needsItem;
         private string description;
+
 
 
         public Inventory(string _name, bool canUse, string _description, bool _isAlive, byte _space)
@@ -26,6 +28,10 @@ namespace Ex_Tempore.Control
             space = _space;
         }
 
+        public int Ammo
+        {
+            get { return ammo; }
+        }
 
         public string Name
         {

@@ -1,3 +1,2 @@
 ﻿a:Te acercas a una casa vecina con un gran agujero en la pared.
-b:Te acercas al tambo en llamas
-c:Comienzas a caminar en paralelo a la calle
+b:Comienzas a caminar en paralelo a la calle

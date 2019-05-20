@@ -61,7 +61,7 @@ namespace Ex_Tempore.Actos.A1
                         {
                             foreach (KeyValuePair<string, string> entry1 in FileControl.respuestasTemp)
                             {
-                                Console.Clear();
+                                
                         
                                 if (FileControl.allTheThingsTemp.Count == 0)
                                 {

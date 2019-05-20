@@ -1,2 +1,2 @@
 ﻿a:Te acercas despacio y observas cómo están golpeando a lo lejos a un hombre, se ve que está seriamente lastimado y esta sangrando.
-c:Narrador: Tocas la puerta de la casa de Natalia, escuchas pasos cada vez mas cerca de la puerta, cortos y livianos, es Natalia. [Saltar Linea] Natalia: Qué haces aqui? Que te paso en el cuello!?!? Porque tienes un moretón tan grande?!
+b:Narrador: Tocas la puerta de la casa de Natalia, escuchas pasos cada vez mas cerca de la puerta, cortos y livianos, es Natalia. [Saltar Linea] Natalia: Qué haces aqui? Que te paso en el cuello!?!? Porque tienes un moretón tan grande?!
